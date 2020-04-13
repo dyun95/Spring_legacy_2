@@ -34,7 +34,7 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		
 		//밑에 리턴값은 jsp 이름
-		return "home";
+		return "index";
 	}
 	
 	//if (command.equals) 를 단순화 시켯다 밑에처럼	 method= 안쓰면  기본값  GET
