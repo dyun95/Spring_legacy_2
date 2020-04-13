@@ -33,7 +33,30 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
+		//밑에 리턴값은 jsp 이름
 		return "home";
 	}
+	
+	//if (command.equals) 를 단순화 시켯다 밑에처럼	 method= 안쓰면  기본값  GET
+	@RequestMapping(value = "/test")
+	public String test() {
+		System.out.println("Test 실행.");
+		return "test";
+	}
+	
+	
+	@RequestMapping(value = "/test2", method =RequestMethod.GET)
+	public String test2() {
+		System.out.println("TEST2 실행");
+		return "test2";
+		
+	}
+	@RequestMapping(value = "/test3",method = RequestMethod.GET)
+	public String test3() {
+		System.out.println("test3실행");
+		return "sub/test3";
+		
+	}
+	
 	
 }
